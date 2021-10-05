@@ -7,7 +7,7 @@ A simple Art/NFT generator, that uses the [Pillow](https://pypi.org/project/Pill
 Just run the file and you will get 15 completely new Images generated.
 
 ## Config
-You can change the image size, padding, and number of images in the ![config.py](config.py) file.
+You can change the image size, padding, and number of images in the [config.py](config.py) file.
 Example file:
 ```
 number_images = 15
