@@ -1,6 +1,8 @@
 from PIL import Image, ImageDraw, ImageChops
 import random
 import colorsys
+import config
+
 
 def random_color():
     h = random.random()
@@ -21,10 +23,10 @@ def interpolate(start_color, end_color, factor: float):
     )
 
 def generate_art(path: str):
-    target_size = 720
+    target_size = config.image_size
     scale_factor = 2
     img_size = target_size * scale_factor
-    paddign_px = 90 * scale_factor
+    paddign_px = config.image_padding * scale_factor
     img_bg_color = (13, 16, 36)
     start_color = random_color()
     end_color = random_color()
@@ -82,5 +84,5 @@ def generate_art(path: str):
     image.save(path)
 
 if __name__ == "__main__":
-    for i in range(15):
+    for i in range(config.number_images):
         generate_art(f"image_{i}.png")
